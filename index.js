@@ -4,10 +4,9 @@ import db from './config/db.js';
 
 const app = express();
 
-db.connect((error)=>{
-        if(error) throw error;
-        console.log("Conexion Exitosa");
-});
+db.authenticate()
+    .then(()=>console.log('Conexion exitosa'))
+    .catch(error=>console.log(error));
 
 const port = process.env.PORT || 4000;
 

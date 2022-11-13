@@ -1,4 +1,5 @@
 import express from 'express';
+import { paginaProductos,paginaClientes } from '../controller/paginasController.js';
 
 const router = express.Router();
 
@@ -8,25 +9,10 @@ router.get('/',(req,res)=>{
     });
 });
 
-router.get('/clientes',(req,res)=>{
-    res.render('viewcliente',{
-        pagina:'Clientes'
-    });
-});
+router.get('/clientes', paginaClientes);
+router.post('/clientes',guardarCliente);
 
-router.get('/productos',(req,res)=>{
-    res.render('viewproductos',{
-        pagina:'Productos'
-    });
-});
-
-router.get('/lista-clientes',(req,res)=>{
-    res.send('lista-clientes');
-});
-
-router.get('/lista-productos',(req,res)=>{
-    res.send('lista-productos');
-});
+router.get('/productos',paginaProductos);
 
 
 export default router;

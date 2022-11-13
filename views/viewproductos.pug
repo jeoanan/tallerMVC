@@ -10,9 +10,10 @@ block contenido
                 th(scope="col") Cantidad
                 th(scope="col") Descripcion
         tbody
-            tr
-                th(scope="row") GN-250
-                td Guacamole Natural
-                td 10000 COP
-                td 50
-                td Guacamole natural de 250 Gramos sin conservantes
+            each producto in productos
+                tr
+                    th(scope="row")=producto.referencia
+                    td=producto.nombre
+                    td=producto.precio + "/COP"
+                    td=producto.cantidad
+                    td=producto.descripcion

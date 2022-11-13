@@ -1,10 +1,19 @@
-import mysql from 'mysql';
+import  Sequelize from "sequelize";
 
-const db = mysql.createConnection({
-    host:'localhost',
-    database:'tallerbd',
-    user:'root',
-    pass:''
+const db = new Sequelize('tallerbd','root','',{
+    host: 'localhost',
+    port:'3306',
+    dialect:'mysql',
+    define:{
+        timestamps:false
+    },
+    pool:{
+        max:5,
+        min:0,
+        acquire:30000,
+        idle:10000
+    },
+    operatorAliases:false
 });
 
 export default db;
