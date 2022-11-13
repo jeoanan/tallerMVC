@@ -1,0 +1,25 @@
+extends ./layout/index
+
+block contenido
+    form
+        .mb-2
+            label(for="nombreCliente", class="form-label") Nombre
+            input(type="text" class="form-control", id="nombreCliente")
+
+        .mb-2
+            label(for="apellidoCliente", class="form-label") Apellidos
+            input(type="text" class="form-control", id="apellidoCliente")
+        .mb-2
+            label(for="docCliente", class="form-label") Documento
+            input(type="text" class="form-control", id="docCliente")
+        .mb-2
+            label(for="correoCliente", class="form-label") Correo
+            input(type="email" class="form-control", id="correoCliente")
+        .mb-2
+            label(for="direccionCliente", class="form-label") Direccion
+            input(type="text" class="form-control", id="direccionCliente")
+        .mb-2
+            label(for="telefonoCliente", class="form-label") Telefono
+            input(type="text" class="form-control", id="telefonoCliente")
+  
+        button(type="submit", class="btn btn-primary") Guardar
