@@ -1,5 +1,6 @@
 import express from 'express';
 import { paginaProductos,paginaClientes } from '../controller/paginasController.js';
+import { guardarCliente } from '../controller/clienteController.js';
 
 const router = express.Router();
 

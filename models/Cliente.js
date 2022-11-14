@@ -1,7 +1,7 @@
 import Sequelize  from "sequelize";
 import db from "../config/db.js";
 
-export const Cliente=db.define('clientes',{
+export const Cliente = db.define('clientes',{
     nombre: {
         type: Sequelize.STRING
     },
@@ -19,6 +19,5 @@ export const Cliente=db.define('clientes',{
     },
     telefono : {
         type: Sequelize.STRING
-    }
-
-})
+    },
+});
